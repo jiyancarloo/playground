@@ -1,12 +1,13 @@
 "use client";
-
-import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useState, useRef, useLayoutEffect, useEffect } from "react";
-import useNavbarTheme from "@/src/hooks/useNavbarTheme";
 import { usePathname } from "next/navigation";
+import gsap from "gsap";
+import useNavbarTheme from "@/src/hooks/useNavbarTheme";
 import Image from "next/image";
 import Link from "next/link";
+import Lineicons from "@lineiconshq/react-lineicons";
+import { MenuHamburger1Outlined } from "@lineiconshq/free-icons";
 
 gsap.registerPlugin(useGSAP);
 export default function Navbar() {
@@ -109,15 +110,33 @@ export default function Navbar() {
 
   return (
     <>
-      <nav
-        className={`fixed top-0 left-0 w-full h-20 flex items-center justify-between px-10 z-9999 transition-colors duration-500 ${
-          navTheme === "light"
-            ? "text-black backdrop-blur"
-            : "text-white  backdrop-blur"
+      <div className="absolute top-20 left-0 w-full z-9999">
+        <nav
+          className={`h-20 flex justify-end items-center gap-6 pr-40 transition-colors duration-500 ${
+            navTheme === "light" ? "text-black " : "text-white "
+          }`}>
+          <div className="flex gap-6 ">
+            {menuItems.map((item, index) => (
+              <Link key={index} href={item.href}>
+                <button className="cursor-pointer font-medium tracking-tight">
+                  {item.label}
+                </button>
+              </Link>
+            ))}
+          </div>
+        </nav>
+      </div>
+
+      <div
+        className={`fixed top-20 right-0 h-20 flex items-center pr-20 z-9999 transition-colors duration-500 ${
+          navTheme === "light" ? "text-black " : "text-white "
         }`}>
-        <span>PRACTICE</span>
-        <button onClick={toggleMenu}>Menu</button>
-      </nav>
+        <button
+          onClick={toggleMenu}
+          className="flex items-center gap-4 cursor-pointer ">
+          <Lineicons icon={MenuHamburger1Outlined} size={26} />
+        </button>
+      </div>
 
       {/* OVERLAY NAV BAR */}
       <>
