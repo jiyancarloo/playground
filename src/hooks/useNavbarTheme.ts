@@ -1,4 +1,3 @@
-// hooks/useNavbarTheme.ts
 "use client";
 
 import { useEffect, useState } from "react";
@@ -28,7 +27,8 @@ export default function useNavbarTheme() {
         });
       },
       {
-        threshold: 0.6,
+        threshold: 0.5,
+        rootMargin: "-20% 0px -20% 0px",
       },
     );
 
