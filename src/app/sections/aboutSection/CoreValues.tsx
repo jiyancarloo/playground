@@ -1,10 +1,13 @@
 import Section from "@/src/components/ui/Theme/ThemeWrapper";
+import Container from "@/src/components/layout/Container";
 
 export default function CoreValues() {
   return (
     <>
       <Section theme="dark">
-        <div>CORE</div>
+        <Container>
+          <div className="py-40">CORE</div>
+        </Container>
       </Section>
     </>
   );
