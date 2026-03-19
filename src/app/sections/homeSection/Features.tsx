@@ -1,6 +1,7 @@
 "use client";
 import { Tab } from "@/src/components/ui/TabComponent/types";
 import TabComponent from "@/src/components/ui/TabComponent/Tab";
+import Container from "@/src/components/layout/Container";
 import Section from "@/src/components/ui/Theme/ThemeWrapper";
 
 const productData: Tab[] = [
@@ -96,17 +97,23 @@ const productData: Tab[] = [
 export default function FeaturesSection() {
   return (
     <>
-      <Section theme="dark">
-        <div className="max-w-7xl py-20 px-6">
-          <div className="flex flex-col gap-6 ">
-            <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight">
-              Next Js Playground
-            </h1>
+      <Section theme="light">
+        <Container>
+          <div className="py-30">
+            <div className="space-y-16">
+              <div className="flex flex-col gap-8">
+                <h1 className="text-sm font-bold">My Playground</h1>
+                <h1 className="max-w-3xl text-4xl/tight  tracking-tight">
+                  This is my testing grounds for GSAP, React and Next js
+                </h1>
+              </div>
 
-            <h1 className="">Practicing Tab Component </h1>
-            <TabComponent tabs={productData} />
+              <div className="">
+                <TabComponent tabs={productData} />
+              </div>
+            </div>
           </div>
-        </div>
+        </Container>
       </Section>
     </>
   );
