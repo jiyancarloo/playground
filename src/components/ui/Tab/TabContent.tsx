@@ -33,7 +33,7 @@ export default function TabContent({ item }: TabContentProps) {
           {item.subheader}
         </span>
 
-        <span className="text-2xl lg:text-3xl tracking-tight leading-10">
+        <span className="text-2xl lg:text-3xl tracking-tight font-light leading-10">
           {item.header}
         </span>
       </div>
