@@ -1,8 +1,31 @@
 "use client";
-import { Tab } from "@/src/components/ui/TabComponent/types";
-import TabComponent from "@/src/components/ui/TabComponent/Tab";
+import { Tab } from "@/src/components/ui/Tab/types";
+import TabComponent from "@/src/components/ui/Tab/Tab";
 import Container from "@/src/components/layout/Container";
 import Section from "@/src/components/ui/Theme/ThemeWrapper";
+import Accordion from "@/src/components/ui/Accordion/Accordtion";
+import { AccordionItems } from "@/src/components/ui/Accordion/types";
+
+const accordionData: AccordionItems[] = [
+  {
+    id: 1,
+    title: "Branding",
+    content:
+      "The identity of your business is more than just a logo. Quality marketing cannot work without intentional branding in place. To get your marketing structured, we create logos, iconography, color schemes, design style, and overall continuity to define your business.",
+  },
+  {
+    id: 2,
+    title: "Graphic Design",
+    content:
+      "Whether we are talking about your website or your business cards, we want to make sure your business is promoted properly. Attention to detail is key - and no piece should be overlooked. The design choices in your projects help emit the emotion for your brand. When it comes down to it, we are artists with the technical know-how. So not only will your project look great, but it will also function great as well.",
+  },
+  {
+    id: 3,
+    title: "Web Design & Development",
+    content:
+      "Whether we are talking about your website or your business cards, we want to make sure your business is promoted properly. Attention to detail is key - and no piece should be overlooked. The design choices in your projects help emit the emotion for your brand. When it comes down to it, we are artists with the technical know-how. So not only will your project look great, but it will also function great as well.",
+  },
+];
 
 const productData: Tab[] = [
   {
@@ -97,13 +120,14 @@ const productData: Tab[] = [
 export default function FeaturesSection() {
   return (
     <>
-      <Section theme="light">
+      <Section theme="light" className="py-30">
         <Container>
-          <div className="py-30">
+          <div className="space-y-50">
+            {/* Tab Section */}
             <div className="space-y-16">
               <div className="flex flex-col gap-8">
-                <h1 className="text-sm font-bold">My Playground</h1>
-                <h1 className="max-w-3xl text-4xl/tight  tracking-tight">
+                <h1 className="text-sm font-semibold">My Playground</h1>
+                <h1 className="max-w-3xl text-[40px]/snug font-light tracking-tight">
                   This is my testing grounds for GSAP, React and Next js
                 </h1>
               </div>
@@ -111,6 +135,10 @@ export default function FeaturesSection() {
               <div className="">
                 <TabComponent tabs={productData} />
               </div>
+            </div>
+
+            <div>
+              <Accordion accordionData={accordionData} />
             </div>
           </div>
         </Container>
