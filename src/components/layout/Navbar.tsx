@@ -2,14 +2,15 @@
 import { useGSAP } from "@gsap/react";
 import { useState, useRef, useLayoutEffect, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { MenuHamburger1Outlined } from "@lineiconshq/free-icons";
 import gsap from "gsap";
 import useNavbarTheme from "@/src/hooks/useNavbarTheme";
 import Image from "next/image";
 import Link from "next/link";
 import Lineicons from "@lineiconshq/react-lineicons";
-import { MenuHamburger1Outlined } from "@lineiconshq/free-icons";
 
 gsap.registerPlugin(useGSAP);
+
 export default function Navbar() {
   const navTheme = useNavbarTheme();
   const menuItems = [
@@ -149,7 +150,7 @@ export default function Navbar() {
               onClick={toggleMenu}>
               Close X
             </button>
-            <div ref={previewRef} className="flex lg:gap-8  lg:items-center">
+            <div ref={previewRef} className="flex lg:gap-8 lg:items-center">
               <div className="relative w-[80vh] h-[70vh] overflow-hidden">
                 <Image
                   fill

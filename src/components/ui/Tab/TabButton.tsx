@@ -11,7 +11,7 @@ export default function TabButtons({
   setActiveTab,
 }: TabButtonProps) {
   return (
-    <div className="flex gap-8 lg:gap-8 ">
+    <div className="flex gap-8 lg:gap-8">
       {tabData.map((tab, index) => (
         <button
           key={tab.title}

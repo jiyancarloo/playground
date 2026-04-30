@@ -122,8 +122,9 @@ export default function FeaturesSection() {
     <>
       <Section theme="light" className="py-30">
         <Container>
-          <div className="space-y-50">
+          <div className="space-y-50 z-100">
             {/* Tab Section */}
+
             <div className="space-y-16">
               <div className="flex flex-col gap-8">
                 <h1 className="text-sm font-semibold">My Playground</h1>
@@ -136,7 +137,6 @@ export default function FeaturesSection() {
                 <TabComponent tabs={productData} />
               </div>
             </div>
-
             <div>
               <Accordion accordionData={accordionData} />
             </div>
