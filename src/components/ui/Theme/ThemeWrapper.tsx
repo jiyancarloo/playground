@@ -2,7 +2,7 @@
 import React from "react";
 
 type SectionProps = {
-  theme: "dark" | "light"; // section theme
+  theme: "dark" | "light";
   children: React.ReactNode;
   className?: string;
 };
