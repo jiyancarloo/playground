@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <>
       <Section theme="dark">
-        <div className="relative aspect-auto min-h-screen overflow-hidden z-100">
+        <div className="relative aspect-auto  overflow-hidden z-100">
           <Image
             src="/hero1.webp"
             alt="herobanner"
