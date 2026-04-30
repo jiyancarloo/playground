@@ -4,7 +4,7 @@ import Container from "./Container";
 export default function Footer() {
   return (
     <>
-      <Section theme="dark" className="py-40 ">
+      <Section theme="dark" className="py-40">
         <Container>
           <div className="space-y-8">
             <span className=" block text-sm font-bold">
